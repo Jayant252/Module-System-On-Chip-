@@ -1,0 +1,175 @@
+\documentclass{report}
+\usepackage{titlesec}
+\usepackage{geometry} % Add the geometry package
+\usepackage{graphicx}
+\usepackage{titletoc}
+\usepackage{blindtext}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage[document]{ragged2e}
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+\makeatother
+
+ %Redefine the \chapter command to include custom chapter names with numbers
+\makeatletter
+\newcommand{\customchapter}[1]{%
+ \refstepcounter{chapter}%
+\chapter*{\thechapter. #1}%
+  \addcontentsline{toc}{chapter}{\thechapter. #1}%
+  
+}
+\makeatother
+
+ %Customize the chapter heading format
+%\titleformat{\chapter}[display]
+ % {\normalfont\huge\bfseries}
+  %{0pt}
+  %{0pt}
+  %{\LARGE}
+
+% Configure page layout with the geometry package
+\geometry{
+  left=.75in,  % Adjust the left margin
+  right=.75in, % Adjust the right margin
+  top=.75in,   % Adjust the top margin
+  bottom=.75in % Adjust the bottom margin
+}
+
+% Customize the spacing above and below chapter titles
+\titlespacing*{\chapter}{0pt}{0pt}{10pt} % Adjust the last value (10pt) to control the space
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+    \hspace{5mm}\textbf{\LARGE Lab Oriented Project Report }
+    \begin{center}
+    \vspace{0.5mm}
+    \Large On
+    \end{center}
+    \vspace{0.5mm}
+    \center{\textbf{\LARGE Final Specification}}
+\end{center}
+
+\vspace{10mm}
+\begin{center}
+\textcolor{darkgray}{\LARGE Submitted in partial fulfilment }
+\end{center}
+\begin{center}
+\vspace{0.5mm}
+\Large of
+\vspace{0.5mm}
+\end{center}
+\begin{center}
+\textbf{\LARGE System-on-Chip}
+\end{center}
+
+\vspace{10mm}
+
+\begin{figure}[h!]
+    \begin{center}
+    \includegraphics[width=10cm, height=3cm]{Image/RWU.png}
+    \end{center}
+    \end{figure}
+    
+\vspace{3mm} 
+\begin{center}
+\textbf{\Large Under the Guidance of :}
+\newline
+\Large Prof. Dr. A. Siggelkow 
+\end{center}
+
+\vspace{10mm}
+
+\textbf{\hspace{70mm} \Large Submitted By :}
+
+\hspace{63mm} \Large Jayant Patil (18041745)
+\par
+\hspace{60mm} \Large Aditya Grewal (29541041)
+\par
+\hspace{57mm} \Large Avanindra Kumar Mishra (20241804) 
+\par 
+\hspace{47mm} \Large Sagar Shreeshailappa Hosmani (27741741)
+
+% Author
+%{ \large
+ % {\textit{\textbf{Guided by}}}, \\[0.1cm]
+  %}
+  % \Large
+  %\textbf{Prof. Dr.-Ing. A. Siggelkow }\\[0.1cm]
+%}
+
+\vspace{25mm}
+\begin{center}
+
+\textbf{\Large MASTER OF ELECTRICAL ENGINEERING AND EMEBDDED SYSTEMS}\\[0.4cm]
+\vspace{5mm}
+\textbf{\Large HOCHSCHULE RAVENSBURG-WEINGARTEN}\\[0.4cm]
+% Bottom
+\vspace{5mm}
+\textbf{\Large \today}
+\end{center}
+ \end{titlepage}
+
+\tableofcontents
+\newpage
+\textbf{\Large List of Figures}
+\vspace{3mm}
+\begin{enumerate}[ align=right, itemsep=5pt] % Adjust itemsep as needed
+  \item System view \dotfill 8
+  \item  Functional Block Diagram\dotfill 9
+  \item   AXI transaction \dotfill 11
+  \item RISC-V instruction formats \dotfill 13
+  \item    Register File \dotfill 15
+  \item    TAP Controller Architecture \dotfill 16
+  \item    Finite State Machine \dotfill 17
+  \item   Data Register\dotfill 18
+  \item   Architecture overview \dotfill 19
+  \item    ARM Cortex-A9\dotfill 20
+  \item    Scan Chain Implementation\dotfill 21
+  \item     SoC Block Diagram \dotfill 24
+  \item    Custom IP \dotfill 25
+  \item    Write Operation \dotfill 26
+  \item   Read Operation \dotfill 27
+  \item   Scan chain 1 \dotfill 28
+  \item   Scan chain 2 \dotfill 29
+  \item    Bypass \dotfill 30
+  
+  %\item ARM Cortex-A9 \dotfill 9
+  %\item RISC-V instruction formats \dotfill 10
+\end{enumerate}
+
+\vspace{10mm}
+\textbf{\Large List of Tables}
+\vspace{3mm}
+\begin{enumerate}[ align=right, itemsep=5pt] % Adjust itemsep as needed
+  \item List of Glossary \dotfill 7
+  \item List of Documents \dotfill 7
+  \item Key Features \dotfill 8
+  \item Port Addresses \dotfill 23
+  \item AXI Interconnect \dotfill 25
+  \item Custom IP \dotfill 25
+  \item Basic Drivers \dotfill 31
+  \item List of Documents \dotfill 32
+\end{enumerate}
+
+\include{Sections/Functional_Requirements}
+
+\include{Sections/History}
+
+\include{Sections/Document Overview}
+
+\include{Sections/Product_Overview}
+
+\include{Sections/Architecture_Concepts}
+\include{Sections/Description_of_the_Desgin_Element}
+\include{Sections/Test_and_Debug}
+\include{Sections/Memory Maping and Register List}
+\include{Sections/System simulation and applications}
+\include{Sections/Bibliography}
+\end{document}

@@ -1,0 +1,16 @@
+\contentsline {chapter}{1. Document Overview}{2}{}%
+\ttl@starttoc {chapters@1}
+\contentsline {chapter}{2. Requirements}{3}{}%
+\contentsline {section}{\numberline {2.1}Functional Requirements}{3}{}%
+\contentsline {chapter}{3. Product Overview}{5}{}%
+\contentsline {section}{\numberline {3.1}Introduction}{5}{}%
+\contentsline {section}{\numberline {3.2}Key Features}{5}{}%
+\contentsline {section}{\numberline {3.3}Functional Block Diagram}{5}{}%
+\contentsline {section}{\numberline {3.4}Register File}{6}{}%
+\contentsline {section}{\numberline {3.5}Scan Test}{7}{}%
+\contentsline {chapter}{4. Architecture Concepts}{8}{}%
+\contentsline {section}{\numberline {4.1}Target SoC Architecture}{8}{}%
+\contentsline {section}{\numberline {4.2}AXI Bus}{8}{}%
+\contentsline {section}{\numberline {4.3}ARM Core}{9}{}%
+\contentsline {section}{\numberline {4.4}RISC-V Instruction Set Architecture}{10}{}%
+\contentsfinish 

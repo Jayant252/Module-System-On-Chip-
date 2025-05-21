@@ -1,0 +1,66 @@
+\customchapter{Requirements}
+\begin{longtable}{|p{3.5cm}|p{1cm}|p{2cm}|p{2cm}|p{6.5cm}|}
+ \hline
+ \textbf{Requirement} & \textbf{ID} & \textbf{Importance} & \textbf{Verifiable} & \textbf{Description} \\
+ \hline
+ \hline
+Register file (peripheral) & G01 & High & VHDL-TB & An IP with 32x 32-bit registers is designed to be interfaced as a peripheral with the ARM Cortex-A9 core. This register file acts as an slave.
+\\
+ \hline
+  Write access & G02 & High & VHDL-TB & Register file (peripheral) provides write access to the other surrounding peripherals.
+\\
+\hline
+Read access & G03 & High & VHDL-TB & Register file (peripheral) provides read access to the other surrounding peripherals.
+\\
+\hline
+Communication between ARM Cortex-A9 core and Register file & G04 & High & VHDL-TB & AXI4-Lite bus is utilized to communicate between ARM Cortex-A9 Core and memory mapped Register file (peripheral).
+ \\
+ \hline
+ AXI4-Lite channels & G05 & High & VHDL-TB & All the five channels of AXI4-Lite bus are essential for communication.
+\\
+\hline
+ Memory mapping of register file (peripheral) & G06 & High & VHDL-TB/ Application program & The register peripheral must be mapped to certain addresses among the memory map of the ARM Cortex-A9 core.
+\\
+\hline
+ RISC V compliance & G07 & High & Application program & The register file (peripheral) must be RISC V compliant, i.e., all RISC V instructions should be able to access it (Ex: R-Type instruction, I-Type instruction etc). 
+  \\
+ \hline
+ Max registers in Register file (peripheral) & G08 & High &  & There can be only 32 maximum registers within the register file, as RISC V instruction layout only supports 5 bits for addressing both source and destination registers .\\
+ \hline
+ Word size & G09 & High & VHDL-TB & Word size of the ARM Cortex-A9 core is 32 bit, hence the each register within the register file (peripheral) is of 32 bits wide.
+  \\
+ \hline
+ Register file access test & G10 & High & Application Program & Two registers of register file (peripheral) are interfaced with Z-Board LEDs and switch from a cross-compiled assembly/C program.
+ \\
+ 
+  \hline
+ Scan Test & G11 & Medium & JTAG & TAP controller is designed to perform scan tests on the register file (peripheral).
+\\
+ \hline
+ Clock access to the TAP controller & G12 & Medium & JTAG & TAP controller needs a clock signal to operate the TAP controller state machine. TCLK pin of the TAP controller provides this clock input to the state machine from the JTAG network.
+  \\
+
+ \hline
+ Control signal for the TAP controller & G13 & Medium & JTAG & TAP controller needs a control signal to control the TAP controller state machine. TMS pin of the TAP controller provides this control signal to the state machine from the JTAG network.
+  \\
+ \hline
+ Instruction data to TAP controller & G14 & Medium & JTAG & TDI pin of TAP controller forwards the instruction data from the JTAG network to the state machine.
+  \\
+ \hline
+ Input test data to TAP controller & G15 & Medium & JTAG & TDI pin of TAP controller forwards the input test data from the JTAG network to the register file.
+  \\
+ \hline
+ Collect output test data from the TAP controller & G16 & Medium & JTAG & TDO pin of TAP controller collects the output test data from the register peripheral and then sends it to the JTAG network for observation.
+  \\
+ \hline
+ Transfer test data from TAP controller to register file (peripheral) & G17 & Medium & JTAG & Test data from the TDI of TAP controller can be sequentially cascaded into each flipflop of the register file (peripheral).
+\\
+ 
+ \hline
+Collect test data from register file (peripheral) into TAP Controller & G18 & Medium & JTAG & Cascaded test data from the register file (peripheral) will be cascaded back into the JTAG network via TDO of TAP controller.
+  \\
+  \hline
+  
+  Processor core & G19 & High & Z-Board & ARM Cortex-A9 core present on the Z-Board is used as the main CPU to interface the designed peripheral. This processor core acts as an master. \\
+ \hline
+\end{longtable}

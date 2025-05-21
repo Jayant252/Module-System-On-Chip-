@@ -1,0 +1,54 @@
+\contentsline {chapter}{1. Requirements}{3}{}%
+\contentsline {chapter}{2. History}{5}{}%
+\contentsline {chapter}{3. Document Overview}{6}{}%
+\contentsline {section}{\numberline {3.1}Glossary}{6}{}%
+\contentsline {section}{\numberline {3.2}Document List}{6}{}%
+\contentsline {chapter}{4. Product Overview}{7}{}%
+\contentsline {section}{\numberline {4.1}Introduction}{7}{}%
+\contentsline {section}{\numberline {4.2}Key Features}{7}{}%
+\contentsline {section}{\numberline {4.3}Functional Block Diagram}{8}{}%
+\contentsline {chapter}{5. Architecture Concepts}{9}{}%
+\contentsline {section}{\numberline {5.1}Bus concept}{9}{}%
+\contentsline {subsection}{\numberline {5.1.1}Introduction to AXI4-Lite Bus}{9}{}%
+\contentsline {subsection}{\numberline {5.1.2}AXI4-Lite Functionality}{9}{}%
+\contentsline {subsection}{\numberline {5.1.3}AXI4-Lite Channels}{9}{}%
+\contentsline {subsection}{\numberline {5.1.4}Read and Write Channels}{9}{}%
+\contentsline {subsection}{\numberline {5.1.5} Concurrent Transactions}{9}{}%
+\contentsline {subsection}{\numberline {5.1.6}AXI4-Lite IP Interface (IPIF)}{9}{}%
+\contentsline {subsection}{\numberline {5.1.7}Features of AXI4-Lite IPIF}{10}{}%
+\contentsline {section}{\numberline {5.2}System control concept}{10}{}%
+\contentsline {section}{\numberline {5.3}Clock system}{11}{}%
+\contentsline {section}{\numberline {5.4}Debug Concept}{11}{}%
+\contentsline {section}{\numberline {5.5}RISC-V Instruction Set Architecture}{11}{}%
+\contentsline {chapter}{6. Description of the Design Elements}{13}{}%
+\contentsline {section}{\numberline {6.1}Register file design}{13}{}%
+\contentsline {subsection}{\numberline {6.1.1}RISC-V compatibility }{13}{}%
+\contentsline {subsection}{\numberline {6.1.2}Write Operation}{13}{}%
+\contentsline {subsection}{\numberline {6.1.3}Read Operation}{13}{}%
+\contentsline {subsection}{\numberline {6.1.4}Scan Flip Flop}{13}{}%
+\contentsline {section}{\numberline {6.2}TAP Controller}{14}{}%
+\contentsline {subsection}{\numberline {6.2.1}IEEE Std. 1149.1 Scan Testing:}{15}{}%
+\contentsline {subsection}{\numberline {6.2.2}TAP FSM:}{16}{}%
+\contentsline {subsection}{\numberline {6.2.3}\textbf {Data Register:}}{17}{}%
+\contentsline {subsection}{\numberline {6.2.4}\textbf {Instruction Registration:}}{17}{}%
+\contentsline {subsection}{\numberline {6.2.5}\textbf {Parallel and Serial Data Handling:}}{17}{}%
+\contentsline {subsection}{\numberline {6.2.6}\textbf {Update Operations:}}{17}{}%
+\contentsline {subsection}{\numberline {6.2.7}\textbf {TAP Controller Tests:}}{18}{}%
+\contentsline {section}{\numberline {6.3}Target SoC Architecture}{18}{}%
+\contentsline {section}{\numberline {6.4}ARM Core}{19}{}%
+\contentsline {chapter}{7. Test and Debug}{20}{}%
+\contentsline {section}{\numberline {7.1}Scan Chain}{20}{}%
+\contentsline {section}{\numberline {7.2}Design}{20}{}%
+\contentsline {section}{\numberline {7.3}Operation}{21}{}%
+\contentsline {chapter}{8. Memory Maps and Register Lists}{22}{}%
+\contentsline {chapter}{9. System simulation and applications}{23}{}%
+\contentsline {section}{\numberline {9.1}Block diagram}{23}{}%
+\contentsline {subsection}{\numberline {9.1.1}Custom IP Hierarchy}{24}{}%
+\contentsline {section}{\numberline {9.2}Custom IP simulation}{25}{}%
+\contentsline {subsection}{\numberline {9.2.1}Test case 1}{25}{}%
+\contentsline {subsection}{\numberline {9.2.2}Test case 2}{26}{}%
+\contentsline {subsection}{\numberline {9.2.3}Test case 3}{28}{}%
+\contentsline {section}{\numberline {9.3}Synthesis}{28}{}%
+\contentsline {section}{\numberline {9.4} Application development}{28}{}%
+\contentsline {chapter}{10. Bibliography}{30}{}%
+\contentsfinish 

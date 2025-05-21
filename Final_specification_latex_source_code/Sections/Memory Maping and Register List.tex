@@ -1,0 +1,38 @@
+\customchapter{Memory Maps and Register Lists}
+
+The custom IP is instantiated in the AXI slave interface and then the ports of the register file are binded with the internal registers of the AXI slave interface as described in section 8.1.1. This allows further memory mapping of the custom IP with ARM core. As a result, all the ports of the register file can be accessed in the ARM core applications with the help of the address. 
+\vspace{2mm}
+
+The base address of the custom IP is 0x43C0\_0000 and the high address is 0x43C0\_007F. The addresses of all the register file ports are as follows.
+
+\begin{table}[h]
+		%\begin{table}[ht]
+		\centering
+		\begin{tabularx}{\textwidth}{|p{3cm}   |X|}
+			\hline
+			\textbf{Port Address
+(base address + offset)
+}  & \textbf{Port name}\\
+			\hline
+			0x43C0\_0000 & Reset     \\
+            \hline
+			0x43C0\_0004 & Register write enable  \\
+			\hline
+			0x43C0\_0008 & Register read address 1  \\
+			\hline
+			0x43C0\_0012 & Register read address 2 \\
+			\hline
+            0x43C0\_0016 & Register write address\\
+			\hline
+            0x43C0\_0020 & Write data register \\
+			\hline
+           0x43C0\_0024 & Scan enable \\
+			\hline
+           0x43C0\_0024 & Read data register 1 \\
+			\hline
+           0x43C0\_0032 & Read data register 2 \\
+			\hline
+		\end{tabularx}
+		\caption{Port Addresses}
+		%\label{tab:01Glossary Type Descriptions}
+	\end{table}
